@@ -12,7 +12,7 @@ if(isset($_POST['registerButton']))
         $dob = $_POST['dateOfBirth'];
         $email = $_POST['inputEmail'];
         $contact = $_POST['contactNumber'];
-        $specialty = $_POST['name'];
+        $specialty = $_POST['specialty'];
 
         $isSuccess = $crud->insertAttendees($firstName, $lastName, $dob, $email, $contact, $specialty);
 
@@ -27,7 +27,7 @@ if(isset($_POST['registerButton']))
     
         <div class="card-body">
             <h5 class="card-title"> <?php echo $_POST['firstName'].' '.$_POST['lastName'];?></h5>
-            <h6 class="card-subtitle"><?php echo $_POST['specialty']; ?></h6>
+            <h6 class="card-subtitle"><?php echo $_POST['name']; ?></h6>
             <p class="card-text">DOB: <?php echo $_POST['dateOfBirth'];?></p>
             <p class="card-text">Email: <?php echo $_POST['inputEmail'];?></p>
             <p class="card-text">Tel: <?php echo $_POST['contactNumber']; ?></p>
