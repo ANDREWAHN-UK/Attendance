@@ -69,7 +69,7 @@ if (!isset($_GET['id'])) {
 
     <div class=" gap-2 col-2 mx-auto">
       
-    <a href="index.php" class="btn btn-info">Home</a>
+    <a href="viewrecords.php" class="btn btn-info">Back to list</a>
     <button type="submit" class="btn btn-success" name="registerButton">Save changes</button>
 
     </div>
