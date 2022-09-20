@@ -12,7 +12,7 @@ if(isset($_POST['registerButton']))
         $dob = $_POST['dateOfBirth'];
         $email = $_POST['inputEmail'];
         $contact = $_POST['contactNumber'];
-        $specialty = $_POST['specialty'];
+        $specialty = $_POST['name'];
 
         $isSuccess = $crud->insertAttendees($firstName, $lastName, $dob, $email, $contact, $specialty);
 
