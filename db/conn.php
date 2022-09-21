@@ -28,6 +28,11 @@
     }
 
     require_once 'crud.php';
+    require_once 'user.php';
+
     $crud = new crud($pdo);
+    $user = new user($pdo);
+
+    $user->insertUser("admin", "password");//<-- this is here so that every time the conn file gets loaded (i.e. on every page) the admin gets created at least once
 
  ?>
