@@ -18,7 +18,7 @@ if(isset($_POST['registerButton']))
         $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
-            $sendgrid->send($email, 'Welcome to the IT Conference', 'Thankyou for registering!');
+            SendEmail::SendMail($email, 'Welcome to the IT Conference', 'Thankyou for registering!');
             include 'includes/successmessage.php';
         } else {
             include 'includes/errormessage.php';
