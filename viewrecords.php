@@ -1,6 +1,7 @@
 <?php
 $title ='View Records';
 require_once 'includes/header.php';
+require_once 'includes/auth_check.php'; //check if the person viewing this is logged in
 require_once 'db/conn.php'; //this needs to connect to conn, not crud.php. Be careful. Crud is created when conn is established.
 
 $results = $crud->getAttendees();

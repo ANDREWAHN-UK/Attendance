@@ -1,6 +1,7 @@
 <?php
 $title = 'Edit Records';
 require_once 'includes/header.php';
+require_once 'includes/auth_check.php'; //check if the person viewing this is logged in
 
 require_once 'db/conn.php';
 
