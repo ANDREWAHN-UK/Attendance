@@ -51,10 +51,6 @@ include_once 'includes/session.php';
             </li>
           <?php } ?>
 
-
-
-
-
         </ul>
 
       </div>
