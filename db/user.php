@@ -45,9 +45,11 @@ class user{
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username', $username);
                 $stmt->bindparam(':password', $password);
-                $stmt->execute();
+
+                $stmt->execute();                
                 $result = $stmt->fetch();
                 return $result;
+
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
@@ -65,6 +67,7 @@ class user{
                 $stmt->execute();
                 $result = $stmt->fetch();
                 return $result;
+
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;

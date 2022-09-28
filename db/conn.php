@@ -7,7 +7,8 @@
     // $pass = '';
     // $charset = 'utf8mb4';  
 
-    // Below for remote database stuff, i.e. connecting to a non local database
+    // // Below for remote database stuff, i.e. connecting to a non local database.
+    //  Remember, when making changes to one database, to duplicate the change in the other database
 
     $host = 'remotemysql.com';
     $db = '1zFOJFQPiN';
