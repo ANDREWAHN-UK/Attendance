@@ -1,9 +1,9 @@
-
 <?php
 
 $title ='Success';
 require_once 'includes/header.php';
 require_once 'db/conn.php'; //this needs to connect to conn, not crud.php. Be careful. Crud is created when conn is established.
+require_once 'sendemail.php';
 
 if(isset($_POST['registerButton']))
     {
@@ -15,8 +15,10 @@ if(isset($_POST['registerButton']))
         $specialty = $_POST['specialty'];
 
         $isSuccess = $crud->insertAttendees($firstName, $lastName, $dob, $email, $contact, $specialty);
+        $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
+            $sendgrid->send($email, 'Welcome to the IT Conference', 'Thankyou for registering!');
             include 'includes/successmessage.php';
         } else {
             include 'includes/errormessage.php';
@@ -27,7 +29,7 @@ if(isset($_POST['registerButton']))
     
         <div class="card-body">
             <h5 class="card-title"> <?php echo $_POST['firstName'].' '.$_POST['lastName'];?></h5>
-            <h6 class="card-subtitle"><?php echo $_POST['name']; ?></h6>
+            <h6 class="card-subtitle"><?php echo $specialtyName['name']; ?></h6>
             <p class="card-text">DOB: <?php echo $_POST['dateOfBirth'];?></p>
             <p class="card-text">Email: <?php echo $_POST['inputEmail'];?></p>
             <p class="card-text">Tel: <?php echo $_POST['contactNumber']; ?></p>
