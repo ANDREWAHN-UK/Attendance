@@ -8,7 +8,6 @@ $results = $crud->getAttendees();
 
 ?>
 
-
 <table class="table">
     <thead>
     <tr>
@@ -47,16 +46,13 @@ $results = $crud->getAttendees();
 
         <?php  //2nd php loop opens
                 }         // this curly brace closes the while loop, started in another php tag
-       //2nd php loop closes ?>
-   
-
+       //2nd php loop closes ?> 
     
 </thead>
 </table>
 <br>
 <br>
 <br>
-
 
 <?php 
 require_once 'includes/footer.php';
