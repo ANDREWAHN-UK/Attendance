@@ -54,6 +54,13 @@ $results = $crud->getSpecialties();
       <input type="text" class="form-control" id="contactNumber" name="contactNumber" aria-describedby="contactNumberHelp">
       <div id="contactNumberHelp" class="form-text">We'll never share your number with anyone else.</div>
     </div> 
+<!-- next bit is for uploading images to user profiles -->
+<br/>
+    <div class="mb-3 form-field custom-file">
+      <label for="avatar" class="form-label">Upload Profile image </label>
+      <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >  
+      <div id="avatarHelp" class="form-text text-danger">File upload is optional.</div>  
+    </div> 
 
     <div class="d-grid gap-2 col-6 mx-auto">
     <button type="submit" class="btn btn-primary" name="registerButton">Register</button>
