@@ -14,10 +14,14 @@ if(isset($_POST['registerButton']))
         $contact = $_POST['contactNumber'];
         $specialty = $_POST['specialty'];
 
-        $orig_file = $_FILES["avatar"]["tmp_name"];
-        $target_directory = 'uploads/';
-        $destination = $target_directory . basename($_FILES["avatar"]["name"]);
-        move_uploaded_file($orig_file,$destination);
+        // $orig_file = $_FILES["avatar"]["tmp_name"];
+        // $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        // $target_dir = 'uploads/';
+        // $destination = "$target_dir$contact.$ext";
+        // move_uploaded_file($orig_file,$destination);
+
+        // Try the above again later
+      
 
         $isSuccess = $crud->insertAttendees($firstName, $lastName, $dob, $email, $contact, $specialty);
         $specialtyName = $crud->getSpecialtyById($specialty);
