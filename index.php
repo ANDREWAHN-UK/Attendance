@@ -56,7 +56,7 @@ $results = $crud->getSpecialties();
     </div> 
 <!-- next bit is for uploading images to user profiles -->
 <br/>
-    <div class="mb-3 form-field custom-file">
+    <div class=" form-field custom-file">
       <label for="avatar" class="form-label">Upload Profile image </label>
       <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >  
       <div id="avatarHelp" class="form-text text-danger">File upload is optional.</div>  
