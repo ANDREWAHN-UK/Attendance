@@ -10,7 +10,7 @@ class SendEmail{
     public static function sendMail($to, $subject, $content){
 
         
-        $key = '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';
+        $key = //try this page again when an env file is created
 
         $email = new \SendGrid\Mail\Mail();
         $email->setFrom("andrew.ahn@hotmail.co.uk", "Andrew Ahn");
