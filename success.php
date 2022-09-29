@@ -3,7 +3,7 @@
 $title ='Success';
 require_once 'includes/header.php';
 require_once 'db/conn.php'; //this needs to connect to conn, not crud.php. Be careful. Crud is created when conn is established.
-require_once 'sendemail.php';
+// require_once 'sendmail.php'; try this again later
 
 if(isset($_POST['registerButton']))
     {
@@ -14,11 +14,16 @@ if(isset($_POST['registerButton']))
         $contact = $_POST['contactNumber'];
         $specialty = $_POST['specialty'];
 
+        $orig_file = $_FILES["avatar"]["tmp_name"];
+        $target_directory = 'uploads/';
+        $destination = $target_directory . basename($_FILES["avatar"]["name"]);
+        move_uploaded_file($orig_file,$destination);
+
         $isSuccess = $crud->insertAttendees($firstName, $lastName, $dob, $email, $contact, $specialty);
         $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
-            SendEmail::SendMail($email, 'Welcome to the IT Conference', 'Thankyou for registering!');
+            // SendEmail::SendMail($email, 'Welcome to the IT Conference', 'Thankyou for registering!');try again later
             include 'includes/successmessage.php';
         } else {
             include 'includes/errormessage.php';
