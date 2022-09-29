@@ -1,4 +1,3 @@
-
 <?php
 $title ='Home';
 require_once 'includes/header.php';
@@ -30,9 +29,7 @@ $results = $crud->getSpecialties();
   <div class="mb-3 form-field">
       <label for="specialty" class="form-label">Area of Expertise</label>
       <select class="form-select" aria-label="Default select example" id="specialty" name="specialty">
-
       <!-- see viewrecords.php for commenting to explain the below -->
-
       <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)){?>
 
           <option 
@@ -61,9 +58,7 @@ $results = $crud->getSpecialties();
     <div class="d-grid gap-2 col-6 mx-auto">
     <button type="submit" class="btn btn-primary" name="registerButton">Register</button>
     </div>
-</form>
-
-   
+</form>  
 
 <?php 
 require_once 'includes/footer.php';
